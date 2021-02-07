@@ -4,21 +4,25 @@ const selectDay = document.getElementById("selectday")
 const selectTime = document.getElementById("sectecttime")
 const selectPerson = document.getElementById("selecperson")
 
-const array = {one:selectTime.value, two:selectPerson}
+//makes a key for local storage in result of combinig input data
 
-function idnameMaker(){
-    let idName = selectDay.value + selectTime.value
-    return idName
+function idNameMaker(){
+    let keyName= selectDay.value + selectTime.value
+    return keyName
 }
 
-function valueArray(){
-    return  {one:formMessage.value, two:selectPerson.value}
+//makes object out of filled data for key in localStorage
+
+function valueObject(){
+    return  {eventName:formMessage.value, person:selectPerson.value}
 }
+
+//checks is slot is avalible or filled to prevent rewriting
 
 function isIdAvailable(){
     let isIdAvailable = true
         for(var key in localStorage){
-            if(idnameMaker() === key){
+            if(idNameMaker() === key){
                 alert("Sorry this slot is taken")
                 isIdAvailable = false
             }
@@ -26,41 +30,18 @@ function isIdAvailable(){
     return isIdAvailable
 }
 
+//function to combine filled data and store it in localStore
+// checks if the input field is filled
 function storeObjectData(){
     if(formMessage.value === ""){
         alert("There is no value in input field")
     }else{
         
         if(isIdAvailable()){
-                localStorage.setItem(idnameMaker(), JSON.stringify(valueArray()));
+                localStorage.setItem(idNameMaker(), JSON.stringify(valueObject()));
                 window.open("../calendar/index.html", "_self");
         }
     }
 }
 createNewBtn.addEventListener("click",storeObjectData)
 
-// function displValConsl(){
-
-
-
-        
-//         // }else{
-    // localStorage.setItem(idnameMaker(), formMessage.value);
-    // window.open("../calendar/index.html", "_self");
-//         // }
-//     } 
-// }
-// checkBtn.addEventListener("click", displValConsl)
-
-
-// let objectTest = formMessage
-
-// console.log(`Value of input :${formMessage.value}`)
-
-// function consleLoging(){
-//     alert(formMessage.value)
-//     localStorage.setItem('testObject', JSON.stringify(objectTest))
-
-// }
-
-// createNewBtn.addEventListener("click", consleLoging)

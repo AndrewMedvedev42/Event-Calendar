@@ -3,6 +3,8 @@ const initialFilter = calendarFilterSelect.value
 
 console.log('initial select value',initialFilter)
 
+// sets event description to the slot
+
 function setValueSlot(slotId, slotElement){
     slotElement.style.backgroundColor = "lightgreen"
     slotElement.style.display = "flex"
@@ -11,14 +13,19 @@ function setValueSlot(slotId, slotElement){
     let rawStorageValue = localStorage.getItem(slotId)
 
     let value = JSON.parse(rawStorageValue)
-    slotElement.innerHTML = value.one
+    slotElement.innerHTML = value.eventName
 }
+
+// makes slot empty
 
 function resetSlot(slotElement){
     slotElement.innerHTML = "_"
     slotElement.style.backgroundColor = "white"
     slotElement.style.justifyContent = "center"
 }
+
+// sets delete icon that deletes the value of the slot
+// and removes object from localStorage (related to the slot)
 
 function setDeleteIcon(slotId, slotElement){
     var imageX = document.createElement('img')
@@ -34,25 +41,27 @@ function setDeleteIcon(slotId, slotElement){
     }
 };
 
+//renders visuals for the filled slot
+
 function renderCalendar(selectedFilter){
     if(localStorage.length === 0){
         console.log("there is no data in local storage")
     }else{
         console.log("you have data to display")
         for(let counter = 0; counter < localStorage.length; counter++){
-            var idName2 = localStorage.key(counter)
-            var chooseDom = document.getElementById(`${idName2}`)
+            var idForSlot = localStorage.key(counter)
+            var chooseDom = document.getElementById(`${idForSlot}`)
             
-            let slotData = JSON.parse(localStorage.getItem(idName2))
-            let assignedFilter = slotData.two
+            let slotData = JSON.parse(localStorage.getItem(idForSlot))
+            let assignedFilter = slotData.person
             console.log({selectedFilter})
             console.log({assignedFilter})
             if(selectedFilter === assignedFilter || selectedFilter === 'all'){
                 
             
-                setValueSlot(idName2, chooseDom)
+                setValueSlot(idForSlot, chooseDom)
                 
-                setDeleteIcon(idName2, chooseDom)
+                setDeleteIcon(idForSlot, chooseDom)
             } else {
                 resetSlot(chooseDom)
             }
