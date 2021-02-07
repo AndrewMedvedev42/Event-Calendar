@@ -1,0 +1,131 @@
+.calendarPage {
+  font-family: Arial, Helvetica, sans-serif;
+  /* background-color: rgb(71, 0, 179); */
+  background-color: #62bae6;
+}
+.calendarPage header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.calendarPage header select, .calendarPage button {
+  padding: 10px 30px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+.calendarPage h1 {
+  color: white;
+  margin: 0;
+}
+.calendarPage button {
+  padding: 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  color: white;
+  background-image: linear-gradient(#ff9933, #e97100);
+  font-weight: bolder;
+  font-size: 15px;
+}
+.calendarPage button:hover {
+  background: #e97100;
+}
+.calendarPage button:active {
+  background-color: grey;
+}
+.calendarPage main {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 270px 220px 220px 220px 220px 220px;
+}
+.calendarPage .slot {
+  background-color: white;
+  margin: 5px 3px;
+  padding: 15px 10px;
+  text-align: center;
+  align-items: center;
+}
+.calendarPage .dayname {
+  color: white;
+  letter-spacing: 2px;
+  font-weight: bolder;
+  background-image: linear-gradient(#ff9933, #e97100);
+}
+.calendarPage .deletebtn {
+  height: 10px;
+  width: auto;
+  cursor: pointer;
+}
+.calendarPage option {
+  border: solid 3px #a71e1e;
+}
+.calendarPage select {
+  padding: 10px;
+  border: solid 3px grey;
+  border-radius: 10px;
+}
+
+.formPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #62bae6;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.formPage .input-form {
+  max-width: 400px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 25% 25% 25% 25%;
+  align-items: center;
+  padding: 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background-color: white;
+  justify-content: cent;
+}
+.formPage h3 {
+  letter-spacing: 2px;
+  margin: 2px;
+  padding: 12px 10px;
+  border-radius: 10px;
+  color: #ff9933;
+  text-align: center;
+}
+.formPage .input-form select, .formPage input {
+  margin: 20px;
+  padding: 10px;
+  border: solid 3px grey;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.formPage .btns {
+  max-width: 400px;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.formPage button {
+  cursor: pointer;
+  padding: 15px 30px;
+  border-radius: 25px;
+  margin-right: 20px;
+  border: none;
+  color: white;
+  /* font-weight: bolder; */
+  font-size: 15px;
+  background-image: linear-gradient(#ff9933, #e97100);
+}
+.formPage button:hover {
+  background: #ff8533;
+}
+.formPage button:active {
+  background-color: grey;
+}
+
+/*# sourceMappingURL=combined.css.map */

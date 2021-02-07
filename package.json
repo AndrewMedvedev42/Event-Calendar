@@ -1,0 +1,19 @@
+{
+  "name": "CalendarMetting",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "sass": "sass scss/combined.scss:css/combined.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.21.2",
+    "webpack-cli": "^4.5.0"
+  },
+  "dependencies": {
+    "node-sass": "^5.0.0",
+    "sass": "^1.32.6"
+  }
+}
