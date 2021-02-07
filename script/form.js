@@ -2,11 +2,17 @@ const createNewBtn = document.getElementById("createbtn")
 const formMessage = document.getElementById("formImputfield")
 const selectDay = document.getElementById("selectday")
 const selectTime = document.getElementById("sectecttime")
-const checkBtn = document.getElementById("checkbtn")
+const selectPerson = document.getElementById("selecperson")
+
+const array = {one:selectTime.value, two:selectPerson}
 
 function idnameMaker(){
     let idName = selectDay.value + selectTime.value
     return idName
+}
+
+function valueArray(){
+    return  {one:formMessage.value, two:selectPerson.value}
 }
 
 function isIdAvailable(){
@@ -26,7 +32,7 @@ function storeObjectData(){
     }else{
         
         if(isIdAvailable()){
-                localStorage.setItem(idnameMaker(), formMessage.value);
+                localStorage.setItem(idnameMaker(), JSON.stringify(valueArray()));
                 window.open("../calendar/index.html", "_self");
         }
     }
