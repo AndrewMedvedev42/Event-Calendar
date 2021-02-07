@@ -1,0 +1,71 @@
+body{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:rgb(98, 186, 230);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+.input-form{
+    max-width: 400px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25% 25% 25% 25%;
+    align-items: center;
+    padding: 20px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: white;
+}
+
+h3{
+
+    letter-spacing: 4px;
+    font-weight: bolder;
+    margin: 2px;
+    padding: 12px 10px;
+    border-radius: 10px;
+    color: rgb(255, 153, 51);
+    text-align: center;
+}
+
+.input-form select, input{
+    margin: 20px;
+    padding: 10px;
+    border: solid 3px grey;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.btns{
+    max-width: 400px;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+button{
+    cursor: pointer;
+    padding: 15px 30px;
+    border-radius: 25px;
+    margin-right: 20px;
+    border: none;
+    color: white;
+    font-weight: bolder;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(rgb(255, 153, 51), rgb(233, 113, 0));
+}
+
+button:hover{
+    background: rgb(255, 133, 51);
+}
+
+button:active{
+    background-color: grey;
+}

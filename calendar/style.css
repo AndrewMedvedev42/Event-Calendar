@@ -1,0 +1,77 @@
+body{
+    
+    font-family: Arial, Helvetica, sans-serif;
+    /* background-color: rgb(71, 0, 179); */
+    background-color:rgb(98, 186, 230);
+}
+
+header{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header select, button{
+    padding: 10px 30px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+h1{
+    color:white;
+    margin: 0;
+}
+
+button{
+    padding: 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    color: white;
+    background-image: linear-gradient(rgb(255, 153, 51), rgb(233, 113, 0));
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+button:hover{
+    background: rgb(175, 175, 175);
+}
+
+button:active{
+    background-color: grey;
+}
+
+main{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 19% 16% 16% 16% 16% 16%;
+}
+
+.slot{
+    background-color:white;
+}
+
+main div .slot{
+    margin: 5px 3px;
+    padding: 15px 10px;
+    text-align:center;
+    align-items: center;
+}
+
+.dayname{
+    color: white;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    background-image: linear-gradient(rgb(255, 153, 51), rgb(233, 113, 0));
+}
+
+.deletebtn{
+    height: 10px;
+    width: auto;
+    cursor: pointer;
+}
+
+option{
+    border: solid 3px rgb(167, 30, 30);
+}
